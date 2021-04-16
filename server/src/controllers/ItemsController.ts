@@ -6,11 +6,11 @@ class ItemsController {
         // mesma coisa que SELECT * FROM items
         const items = await knex('items').select('*')
     
-        const serializedItems = items.map(item => {
+        const serializedItems = items.map((item) => {
             return {
                 id: item.id,
                 title: item.title,
-                image_url: `http://192.168.0.107:3333/uploads/${item.image}`,
+                image_url: `http://192.168.0.147:3333/uploads/${item.image}`,
             };
         });
     
